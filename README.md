@@ -1,2 +1,3 @@
-WebService-SwigClient-Ruby
-==========================
+ruby-webservice-swigclient
+
+A fast client for swig.io
