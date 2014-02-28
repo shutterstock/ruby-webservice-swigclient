@@ -12,11 +12,13 @@ class WebServiceSwigClient
     url = [@service_url, @api_key, path].join("/");
     response = Curly::Request.post(url, headers: { 'Content-type' => 'application/json' }, body: data.to_json)
 
-    if ( response != 200 && @error_handler ) 
-      @error_handler.call("There was a problem communicating with the server")
+    if ( !response.success? )
+      if ( @error_handler )
+        @error_handler.call("There was a problem communicating with the server", response)
+      end
       return
     else
-      response.body
+      return response.body
     end
   end
 end
