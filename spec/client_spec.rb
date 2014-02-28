@@ -8,6 +8,7 @@ describe WebServiceSwigClient do
     class Curly::Request;end
     class MockResponse;end
     MockResponse.singleton_class.class_eval { define_method('status'){|*params| 200 }}
+    MockResponse.singleton_class.class_eval { define_method('success?'){|*params| 1 }}
     MockResponse.singleton_class.class_eval { define_method('body'){|*params| 'foobar' }}
     Curly::Request.singleton_class.class_eval { define_method('post'){|*params| open_params.push(params); MockResponse }}
 
@@ -38,7 +39,7 @@ describe WebServiceSwigClient do
     )
 
     expect(client).to be_an_instance_of(WebServiceSwigClient)
-    expect(client.render('foo.html', {foo:'bar'})).to eq true
+    expect(client.render('foo.html', {foo:'bar'})).to eq "foobar"
     expect(open_params[0]).to eq ["http://localhost/123/foo.html", {:headers=>{"Content-type"=>"application/json"}, :body=>"{\"foo\":\"bar\"}"}]
 
   end
