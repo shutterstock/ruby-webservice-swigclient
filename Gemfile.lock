@@ -2,6 +2,7 @@ PATH
   remote: .
   specs:
     webservice-swigclient (0.0.1)
+      curly-lib (~> 0.0.1)
 
 GEM
   remote: https://rubygems.org/
