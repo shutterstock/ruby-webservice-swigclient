@@ -6,27 +6,27 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
-    curly (0.1.0)
-      json
     curly-lib (0.0.1)
     diff-lcs (1.2.5)
-    json (1.8.1)
-    rake (10.1.1)
-    rspec (2.14.1)
-      rspec-core (~> 2.14.0)
-      rspec-expectations (~> 2.14.0)
-      rspec-mocks (~> 2.14.0)
-    rspec-core (2.14.8)
-    rspec-expectations (2.14.5)
-      diff-lcs (>= 1.1.3, < 2.0)
-    rspec-mocks (2.14.6)
+    rake (10.3.2)
+    rspec (3.0.0)
+      rspec-core (~> 3.0.0)
+      rspec-expectations (~> 3.0.0)
+      rspec-mocks (~> 3.0.0)
+    rspec-core (3.0.1)
+      rspec-support (~> 3.0.0)
+    rspec-expectations (3.0.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.0.0)
+    rspec-mocks (3.0.1)
+      rspec-support (~> 3.0.0)
+    rspec-support (3.0.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   bundler (~> 1.3)
-  curly
   curly-lib
   rake
   rspec
