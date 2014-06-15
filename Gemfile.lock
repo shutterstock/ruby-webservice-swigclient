@@ -27,7 +27,7 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (~> 1.3)
-  curly-lib
+  curly-lib (~> 0.0.1)
   rake
   rspec
   webservice-swigclient!
