@@ -1,11 +1,6 @@
-# coding: utf-8
-lib = File.expand_path('../lib', __FILE__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require './lib/webservice/swigclient'
-
 Gem::Specification.new do |spec|
   spec.name          = "webservice-swigclient"
-  spec.version       = WebServiceSwigClient::VERSION
+  spec.version       = '0.0.1'
   spec.authors       = ["Logan Bell"]
   spec.email         = ["lbell@shutterstock.com"]
   spec.description   = %q{A client for swig.io!}
