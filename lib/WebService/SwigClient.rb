@@ -1,6 +1,6 @@
 class WebServiceSwigClient
   VERSION = '0.0.1'
-  #require 'curly'
+  require 'curly'
 
   def initialize(params)
     @api_key       = params[:api_key]
