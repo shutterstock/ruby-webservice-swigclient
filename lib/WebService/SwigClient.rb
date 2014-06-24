@@ -9,7 +9,7 @@ class WebServiceSwigClient
   end
 
   def render(path, data)
-    url = [@service_url, @api_key, path].join("/");
+    url = (@api_key ? [@service_url, @api_key, path] : [@service_url, path]).join("/");
     response = Curly::Request.post(url, headers: { 'Content-type' => 'application/json' }, body: data.to_json)
 
     if ( !response.success? )
